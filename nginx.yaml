@@ -2,9 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: nvinx
+    hello: world
+    run: nginx
     method: fromcode
-  name: nvinx
+    another: label
+  name: nvinx-yaml
 spec:
   containers:
     - image: nginx
