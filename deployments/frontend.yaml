@@ -2,17 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nejm
-  name: nejm
+    app: frontend
+  name: frontend
+  namespace: default
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
-      app: nejm
+      app: frontend
   template:
     metadata:
       labels:
-        app: nejm
+        app: frontend
     spec:
       containers:
         - image: httpd
